@@ -1,3 +1,13 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* Basis Reset */
 * {
   margin: 0;
@@ -24,7 +34,14 @@ header {
   padding: 1rem;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  text-align: right;
+  text-align: center;
+}
+
+.branding {
+  animation: spin 30s linear infinite;
+  width: 80px;
+  height: 80px;
+
 }
 
 section {
