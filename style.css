@@ -320,5 +320,11 @@ footer {
     grid-template-columns: 1fr; /* 1 Spalte */
   }
 
+  .container-100 {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
 
 }
