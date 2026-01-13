@@ -21,7 +21,8 @@
     <div class="column">
       <div class="slider">
         <div class="slides">
-          <img src="assets/low-potential-boy-in-a-high-potential-world-thumb-01.jpg" alt="low-potential-boy-in-a-high-potential-world-thumb-01">
+          <img src="assets/low-potential-boy-in-a-high-potential-world-thumb-01.jpg"
+            alt="low-potential-boy-in-a-high-potential-world-thumb-01">
         </div>
         <img src="assets/arrow-left.svg" class="arrow arrow-left">
         <img src="assets/arrow-right.svg" class="arrow arrow-right">
@@ -32,15 +33,18 @@
       <h1>Low Potential Boy in a High Potential World</h1>
       <h2>24 Seiten, Farbig, 6,90 EUR</h2>
 
-      <p>Hi Leutis, mein neues Heft ist da! Ich habe selbstverständlich Kosten und Mühen gescheut. Entstanden ist ein frivoles, stümperhaft zusammengeschustertes Schmuddelheftchen mit flachen, schmutzigen Zeichnungen und Texten. Keine Botschaft, kein Bildungsauftrag, keine Metaebene – nur ganz viel Liebe! Wenn ihr da Bock drauf habt, dann klickt auf „Kaufen“. Peace! 
+      <p>Hi Leutis, mein neues Heft ist da! Ich habe selbstverständlich Kosten und Mühen gescheut. Entstanden ist ein
+        frivoles, stümperhaft zusammengeschustertes Schmuddelheftchen mit flachen, schmutzigen Zeichnungen und Texten.
+        Keine Botschaft, kein Bildungsauftrag, keine Metaebene – nur ganz viel Liebe! Wenn ihr da Bock drauf habt, dann
+        klickt auf „Kaufen“. Peace!
       </p>
-        <button href="" class="btn" target="_blank" disabled>Bald erhältlich</button>
-        <blockquote>Zahlung via Stripe</blockquote>
+      <button href="" class="btn" target="_blank" disabled>Bald wieder erhältlich</button>
+      <blockquote>Zahlung via Stripe</blockquote>
 
     </div>
   </div>
 
-<!--
+  <!--
 <div class="center">
   <img width="300" data-src="/assets/presse.jpg" class="mb lazy">
 </div>
@@ -84,9 +88,9 @@
     <div class="gallery-item">
       <img data-src="assets/reihenhaeuser.jpg" alt="Bild 2" class="lazy">
     </div>
-      <div class="gallery-item">
-        <img data-src="assets/oppa.jpg" alt="Bild 4" class="lazy">
-      </div>
+    <div class="gallery-item">
+      <img data-src="assets/oppa.jpg" alt="Bild 4" class="lazy">
+    </div>
     <div class="gallery-item">
       <img data-src="assets/Untitled03.png" alt="Bild 2" class="lazy">
     </div>
@@ -109,8 +113,55 @@
 
   </section>
 
-  <footer>Benjamin Guido Böhlke - &#169; 2025 All rights reserved
-    <a href="https://instagram.com/benjaminguidoboehlke" target="_blank">Instagrääm</a></footer>
+  <footer>
+    <a href="#" id="openModal">Impressum & Datenschutz</a> • 
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <h2>Impressum und Datenschutzerklärung</h2>
+        <p>
+          <b>Verantwortlicher:</b><br>
+          Benjamin Guido Böhlke<br>
+          Brodtischgasse 24, A-2700 Wiener Neustadt<br>
+          Tel: +43(0)681 817 44 272<br>
+          benboehlke@gmail.com<br>
+        </p>
+        <p>
+          <b>Datenschutzerklärung</b><br>
+          Auf dieser Website werden keinerlei personenbezogene Daten verarbeitet. Es werden auch keine besonderen
+          Kategorien personenbezogener Daten (Art. 9 DSGVO) erhoben oder gespeichert.
+        </p>
+        <p>
+          Cookies<br>
+          Unsere Website verwendet keine Cookies, die personenbezogene Daten speichern. Technisch notwendige Cookies
+          (z. B. für die Funktionalität des Warenkorbs oder Logins) werden nur temporär und anonym verwendet und
+          automatisch gelöscht, sobald Sie die Seite verlassen.
+        </p>
+        <p>
+          Rechtliche Hinweise<br>
+          Da wir keine personenbezogenen Daten speichern, gibt es keine weiteren Löschfristen oder
+          Aufbewahrungspflichten.
+        </p>
+
+        <p>
+          <b>Zahlungsabwicklung über Stripe</b><br>
+          Für Zahlungen auf unserer Website nutzen wir den Zahlungsdienstleister Stripe (Stripe Payments Europe,
+          Irland). Wenn Sie
+          auf den Kaufen-Button klicken, werden Sie direkt zu Stripe weitergeleitet. Dort werden personenbezogene Daten
+          wie Name,
+          Adresse und Zahlungsinformationen verarbeitet. Wir haben keinen Zugriff auf Ihre Zahlungsdaten, diese werden
+          ausschließlich von Stripe verarbeitet. Weitere Informationen finden Sie in der <a
+            href="https://stripe.com/de/privacy" target="_blank">Datenschutzerklärung von Stripe</a>.
+          
+        </p>
+
+        <p>
+          © Benjamin Guido Böhlke 2026</p>
+        <button class="btn" id="closeModal">Schließen</button>
+      </div>
+    </div>
+    <a href="https://instagram.com/benjaminguidoboehlke" target="_blank">Instagrääm</a><br>
+     &#169; 2026 Benjamin Guido Böhlke
+  </footer>
 
   <script src="lazyload.js"></script>
 
@@ -120,16 +171,36 @@
     const prev = document.querySelector('.arrow-left');
     const next = document.querySelector('.arrow-right');
     let index = 0;
-  
+
     function showSlide(i) {
       if (i < 0) index = images.length - 1;
       else if (i >= images.length) index = 0;
       else index = i;
       slides.style.transform = `translateX(${-index * 100}%)`;
     }
-  
+
     prev.addEventListener('click', () => showSlide(index - 1));
     next.addEventListener('click', () => showSlide(index + 1));
+  </script>
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+
+    openBtn.addEventListener('click', () => {
+      modalOverlay.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modalOverlay.style.display = 'none';
+    });
+
+    // Klick auf Overlay schließt auch das Modal
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.style.display = 'none';
+      }
+    });
   </script>
 </body>
 
