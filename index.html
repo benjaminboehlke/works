@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benjamin Guido Böhlke - Works</title>
+  <title>Benjamin Guido Böhlke - Illustrator und Designer</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body class="fade">
   <header><img class="branding" src="assets/bgb-logo.svg" alt="Benjamin Guido Böhlke" class="lazy">
   </header>
 
@@ -175,6 +175,11 @@
         modalOverlay.style.display = 'none';
       }
     });
+  </script>
+  <script>
+    window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
   </script>
 </body>
 

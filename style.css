@@ -297,6 +297,15 @@ footer {
   background: #0056b3;
 }
 
+.fade {
+  opacity: 0;
+  transition: opacity 1.0s ease;
+}
+
+.fade.loaded {
+  opacity: 1;
+}
+
 
 /* Responsive Breakpoints */
 
