@@ -97,7 +97,7 @@ section {
 }
 
 .block {
-  display: block;
+  display: inline-block;
 }
 
 
