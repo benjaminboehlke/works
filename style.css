@@ -92,9 +92,12 @@ section {
 .mb {
   margin-bottom: 0.5rem;
 }
+.mt {
+  margin-top: 1rem;
+}
 
 .block {
-  display: inline-block;
+  display: block;
 }
 
 
