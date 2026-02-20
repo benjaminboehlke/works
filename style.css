@@ -66,6 +66,11 @@ section {
   margin-bottom: 6rem;
 }
 
+.oldprice {
+  text-decoration: line-through;
+  color:#949494;
+}
+
 .container-30-30-30 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 2 Spalten */
